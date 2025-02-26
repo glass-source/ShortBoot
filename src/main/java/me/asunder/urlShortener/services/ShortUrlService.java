@@ -37,6 +37,14 @@ public class ShortUrlService {
         return mapToResponse(saved);
     }
 
+    public CreateShortUrlResponse updateShortUrl(String shortCode, String originalUrl) {
+        ShortUrl shortUrl = repository.findByShortCode(shortCode).orElseThrow(() -> new IllegalArgumentException("Short URL not found"));
+        shortUrl.setOriginalUrl(originalUrl);
+        shortUrl.setUpdatedAt(LocalDateTime.now());
+        ShortUrl saved = repository.save(shortUrl);
+        return mapToResponse(saved);
+    }
+
     public ShortUrlDTO.GetOriginalUrlResponse getOriginalUrl(String shortCode) {
         ShortUrl shortUrl = repository.findByShortCode(shortCode).orElseThrow(() -> new IllegalArgumentException("Short URL not found"));
         return new ShortUrlDTO.GetOriginalUrlResponse(shortUrl.getOriginalUrl(), shortUrl.getAccessCount());

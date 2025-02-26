@@ -10,6 +10,7 @@ import lombok.Getter;
 import java.time.LocalDateTime;
 
 public class ShortUrlDTO {
+
     @Data
     public static class CreateShortUrlRequest {
         @NotBlank(message = "URL is required")
