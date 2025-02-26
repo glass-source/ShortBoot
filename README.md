@@ -2,6 +2,7 @@
 
 ## Introduction
 A modern, efficient URL shortening service built with Spring Boot. This service allows you to convert long URLs into shorter, more manageable links while providing redirection capabilities.
+Built in Java + Springboot for [learning purposes](https://roadmap.sh/projects/url-shortening-service)
 
 ## Table of Contents
 - [Features](#features)
