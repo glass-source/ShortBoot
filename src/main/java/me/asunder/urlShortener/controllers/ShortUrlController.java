@@ -7,14 +7,15 @@ import me.asunder.urlShortener.models.ShortUrl;
 import me.asunder.urlShortener.repository.ShortUrlRepository;
 import me.asunder.urlShortener.services.ShortUrlService;
 import org.springframework.http.ResponseEntity;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.web.bind.annotation.*;
-
 import java.net.URI;
 import java.util.HashMap;
 import java.util.Map;
 
 @RestController
 @RequestMapping("/api")
+@CrossOrigin(origins = "http://localhost:5173")
 @RequiredArgsConstructor
 public class ShortUrlController {
 

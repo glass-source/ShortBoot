@@ -39,6 +39,4 @@ public class ShortUrlDTO {
         private String originalUrl;
         private long accessCount;
     }
-
-
 }
